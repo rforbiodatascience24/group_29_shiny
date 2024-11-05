@@ -76,6 +76,14 @@ ui <- page_fluid(
   layout_columns(
     col_widths = 12,
     card(
+      card_header("Plot of base counts"),
+      mainPanel(
+        tableOutput(outputId = "freqcount")
+      )
+    )),
+  layout_columns(
+    col_widths = 12,
+    card(
       card_header("Virtual Amino acid frequency plot output"),
       mainPanel(
         plotOutput(outputId = "freqplot")

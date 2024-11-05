@@ -100,10 +100,12 @@ wrapper <- function(length, prob){
   dna <- gene_dna(length,prob)
   rna <- transcribe_dna(dna)
   aa_seq <- translate_rna(rna)
+  table <- base_freqs(dna)
   plot <- amino_acid_plot(aa_seq)
   output <- list(DNA = dna,
                  RNA = rna,
                  AA_seq = aa_seq,
+                 TABLE = table,
                  PLOT = plot)
   return(output)
 }

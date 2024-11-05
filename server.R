@@ -12,5 +12,6 @@ server <- function(input, output) {
   output$dna <- renderText({wrapper_output()$DNA})
   output$rna <- renderText({wrapper_output()$RNA})
   output$protein <- renderText({wrapper_output()$AA_seq})
+  output$freqcount <- renderTable({wrapper_output()$TABLE})
   output$freqplot <- renderPlot({wrapper_output()$PLOT})
 }
